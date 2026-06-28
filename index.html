@@ -96,6 +96,82 @@
         <span>🌐</span> Full Stack
       </div>
     </div>
+<!-- CHAT BUTTON -->
+<div class="hero-chat-wrapper">
+
+  <button class="chat-toggle-btn" id="chatToggleBtn">
+
+    <!-- Chat Icon -->
+    <svg class="icon-chat"
+      xmlns="http://www.w3.org/2000/svg"
+      width="26"
+      height="26"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2.5">
+
+      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+    </svg>
+
+    <!-- Close Icon -->
+    <svg class="icon-close"
+      xmlns="http://www.w3.org/2000/svg"
+      width="22"
+      height="22"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2.5">
+
+      <line x1="18" y1="6" x2="6" y2="18"/>
+      <line x1="6" y1="6" x2="18" y2="18"/>
+    </svg>
+
+  </button>
+
+  <!-- CHAT PANEL -->
+  <div class="floating-chat-panel" id="chatPanel">
+
+<div class="chat-panel-header">
+  <h3>Get In Touch 👋</h3>
+</div>
+
+
+    <div class="chat-panel-body">
+
+      <input type="text"
+        id="chat-name"
+        placeholder="Your Name">
+
+      <input type="email"
+        id="chat-email"
+        placeholder="Your Email">
+
+      <input type="text"
+        id="chat-subject"
+        placeholder="Subject">
+
+      <textarea
+        id="chat-message"
+        placeholder="Write your message..."></textarea>
+
+      <div id="chat-status" class="chat-status-msg"></div>
+
+      <button
+        id="chat-send-btn"
+        class="chat-send-btn"
+        onclick="chatWidgetSend()">
+
+        Send Message
+
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
   </section>
 
   <!-- ABOUT -->
@@ -610,7 +686,14 @@
     </div>
   </footer>
 
-  <script src="index.js"></script>
-  <script src="chat-widget.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+  emailjs.init("B5LXVY9t-3zuUCl4Y");
+</script>
+
+<script src="index.js"></script>
+<script src="chat-widget.js"></script>
+
 </body>
 </html>
